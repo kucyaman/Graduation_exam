@@ -37,6 +37,7 @@ KidsGallery　子供の書いた絵をアップするとAIが絵画のような�
 MVPリリース
 - Googleログイン
 - アルバムの一連の機能
+　　　-new creat edit destroy 　 
 - 絵本生成
 
 本リリース
