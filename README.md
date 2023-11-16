@@ -1,4 +1,4 @@
-# Graduation_exam
+## Graduation_exam
 
 ### ■サービス概要
 大切な思い出の写真を物語に変換します。
