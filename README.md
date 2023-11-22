@@ -38,7 +38,7 @@ KidsGallery　子供の書いた絵をアップするとAIが絵画のような�
 
 ■ 機能候補
 MVPリリース
-- Googleログイン
+- Google　Instagramログイン
 - アルバムの一連の機能
 　　　-new creat edit destroy 　 
 
@@ -48,9 +48,9 @@ MVPリリース
 - Like
 - コメント
 - その他外部ログイン　google X
-- 
 
 ■ 機能の実装方針予定
+- AWS S3
 - AWSでのデプロイ
 - Dockerによる環境構築
 - ログイン機能（Google,X,Instagram）
