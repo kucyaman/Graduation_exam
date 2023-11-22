@@ -42,7 +42,7 @@ MVPリリース
 - アルバムの一連の機能
 　　　-new creat edit destroy 　 
 
-本リリース
+■ 本リリース
 - 絵本生成
 - 絵本をシェア
 - Like
