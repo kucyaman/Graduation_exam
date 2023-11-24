@@ -92,6 +92,11 @@ MVPリリース
 [XAPI](https://developer.twitter.com/ja/docs/authentication/oauth-2-0/application-only)
 
 
+お疲れ様です！まだキャッチアップしきれていない部分もありますが、調べたものに関しては追記していきます。  
+ご確認お願い致します。
+
+
+
 
 
 
