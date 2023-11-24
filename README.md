@@ -73,6 +73,7 @@ MVPリリース
 - その他外部ログイン　 X
 - 家族へのシェア（みてねの機能参考）
   - 家族の招待機能
+- 不適切な画像のバリデーション[Google Cloud Vision API](https://qiita.com/kumaryoya/items/7d2ee56a10172b7f0b29)
 
 **■ 機能の実装方針予定**
 - [Cloudinary](https://cloudinary.com/products/programmable_media)
