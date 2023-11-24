@@ -75,11 +75,13 @@ MVPリリース
   - 家族の招待機能
 
 **■ 機能の実装方針予定**
+- [Cloudinary](https://cloudinary.com/products/programmable_media)
+  (写真をメインで扱うアプリなので、画像APIはなるべくグレードの高いものを使いたいです。キャッチアップ途中)
 - AWS S3
 - AWSでのデプロイ
   （renderは経験できたのでAWSに挑戦したいです）
-- ログイン機能（Google,X,Instagram  
-- 写真を解析してくれるAI
+- ログイン機能（Google,X,Instagram）
+- 写真を解析してくれるAI（先輩のPFで画像から人を解析して除外したりできるAPIがある話を伺ったので調査中）
 - レスポンシブデザイン
   （写真を取るのはスマホなのでレスポンシブは必須だと考えています）
 
