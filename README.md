@@ -34,7 +34,7 @@ https://demand-services.microad.jp/blog/104-housewives-ads
 
 
 **■ サービスの差別化ポイント・推しポイント**  
-【類似アプリ】
+【類似アプリ】  
 [KidsGallery](https://play.google.com/store/apps/details?id=sato.tokyo.kids_gallery&hl=jp)  
   子供の書いた絵をアップするとAIが絵画のような解説を付けてくれる  
 [みてね](https://mitene.us/)
