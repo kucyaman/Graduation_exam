@@ -49,7 +49,7 @@ KidsGallery　　
 
 **■ 機能候補**
 MVPリリース
-- Google　Instagramログイン
+- Google,Xログイン
 - アルバム機能
   - 写真アップロード
   - タグ付け
@@ -78,8 +78,7 @@ MVPリリース
 - [Cloudinary](https://cloudinary.com/products/programmable_media)
   (写真をメインで扱うアプリなので、画像APIはなるべくグレードの高いものを使いたいです。キャッチアップ途中)
 - AWS S3
-- AWSでのデプロイ
-  （renderは経験できたのでAWSに挑戦したいです）
+- renderでのデプロイ
 - ログイン機能（Google,X,Instagram）
 - 写真を解析してくれるAI（先輩のPFで画像から人を解析して除外したりできるAPIがある話を伺ったので調査中）
 - レスポンシブデザイン
