@@ -1,4 +1,3 @@
-
 ## Graduation_exam  
   
 **■ サービス概要**  
@@ -57,6 +56,7 @@ https://demand-services.microad.jp/blog/104-housewives-ads
 - 絵本生成  
   - 写真選択 (あまり情報が多くなるとトークンがすごそうなので起承転結の４枚、もしくは３枚程度を考えています。他にも制限をかけるかも)
   - 表紙イメージの選択 （イメージは３パターンくらい作成しようと考えています。りーどみーが可愛かったので入力の感じとかを参考にしたいです。素材はフリー素材を使って自作する予定です。）
+    - [イメージ例](https://www.canva.com/design/DAF1JWlNpUs/msA505uRNzZ162mVcplRmQ/edit?utm_content=DAF1JWlNpUs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
   
 **■ 本リリース**  
 - フレンド機能  
@@ -69,10 +69,17 @@ https://demand-services.microad.jp/blog/104-housewives-ads
 -不適切な画像のバリデーション[Google Cloud Vision API](https://qiita.com/kumaryoya/items/7d2ee56a10172b7f0b29)
   
 **■ 機能の実装方針予定**  
-- Cloudinary (写真をメインで扱うアプリなので、画像APIはなるべくグレードの高いものを使いたいです。キャッチアップ途中)  
+- MiniMagick 
 - AWS S3  
 - renderでのデプロイ  
 - ログイン機能（Google,X,Instagram）  
 - 写真を解析してくれるAI（先輩のPFで画像から人を解析して除外したりできるAPIがある話を伺ったので調査中）  
 - レスポンシブデザイン （写真を取るのはスマホなのでレスポンシブは必須だと考えています）  
-- Dockerによる環境構築 （【余裕があれば】Reactを勉強中なので、MVP後にフロントをReactに変えたいです。その際Dockerで両方立ち上げるのが楽と聞いたのでDockerを取り入れたいです）  
+- Dockerによる環境構築
+- フロントエンド：React
+- バックエンド：Rails
+  
+お疲れ様です！   
+アプリのタイトルがまだ未定です。  
+ 技術選定の細かい部分がまだキャッチアップしきれていない部分もありますが、調べたものに関しては追記していきます。  
+ご確認お願い致します。  
