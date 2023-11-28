@@ -1,4 +1,6 @@
-## Graduation_exam  
+## Graduation_exam  (未定)
+
+## [画面遷移図](https://www.figma.com/file/IgI2EjvjNRYXwpOJOAJGgF/%E7%84%A1%E9%A1%8C?type=design&node-id=53%3A567&mode=design&t=kIFmJeyAWdPBKR9w-1)
   
 **■ サービス概要**  
 大切な思い出の写真を物語に変換します。  
@@ -79,7 +81,3 @@ https://demand-services.microad.jp/blog/104-housewives-ads
 - フロントエンド：React
 - バックエンド：Rails
   
-お疲れ様です！   
-アプリのタイトルがまだ未定です。  
- 技術選定の細かい部分がまだキャッチアップしきれていない部分もありますが、調べたものに関しては追記していきます。  
-ご確認お願い致します。  
