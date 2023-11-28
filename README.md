@@ -1,7 +1,9 @@
 ## Graduation_exam  
 
-# 画面遷移図](https://www.figma.com/file/IgI2EjvjNRYXwpOJOAJGgF/%E7%84%A1%E9%A1%8C?type=design&node-id=0%3A1&mode=design&t=im7ENdSZSrVH0Zh8-1)
-  
+### [画面遷移図](https://www.figma.com/file/IgI2EjvjNRYXwpOJOAJGgF/%E7%84%A1%E9%A1%8C?type=design&node-id=0%3A1&mode=design&t=im7ENdSZSrVH0Zh8-1)
+### ER図
+[![Image from Gyazo](https://i.gyazo.com/e5b0440f7d37b6e401c0312919e3b7c4.png)](https://gyazo.com/e5b0440f7d37b6e401c0312919e3b7c4)
+
 **■ サービス概要**  
 大切な思い出の写真を物語に変換します。  
 思い出の写真をアップロードして絵本を作成します。AIが写真を判断し物語を生成します。  
