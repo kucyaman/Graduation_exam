@@ -1,7 +1,9 @@
 ## Graduation_exam  
 
-# 画面遷移図](https://www.figma.com/file/IgI2EjvjNRYXwpOJOAJGgF/%E7%84%A1%E9%A1%8C?type=design&node-id=0%3A1&mode=design&t=im7ENdSZSrVH0Zh8-1)
-  
+### [画面遷移図](https://www.figma.com/file/IgI2EjvjNRYXwpOJOAJGgF/%E7%84%A1%E9%A1%8C?type=design&node-id=0%3A1&mode=design&t=im7ENdSZSrVH0Zh8-1)
+### ER図
+[![Image from Gyazo](https://i.gyazo.com/e5b0440f7d37b6e401c0312919e3b7c4.png)](https://gyazo.com/e5b0440f7d37b6e401c0312919e3b7c4)
+
 **■ サービス概要**  
 大切な思い出の写真を物語に変換します。  
 思い出の写真をアップロードして絵本を作成します。AIが写真を判断し物語を生成します。  
@@ -50,12 +52,12 @@ https://demand-services.microad.jp/blog/104-housewives-ads
   
 **■ 機能候補 MVPリリース**  
 - Googleログイン  
-  - アルバム機能  
-  - 写真アップロード  
-  - タグ付け  
-  - 説明入力  
-  - 画像のAPIを使用し分類
-    - ChatGPTAPIで画像を読み込ませて文章を生成することは現段階ではできない？という記事を見つけたので、もしできない場合は自分で写真に関連タグを付けます。そのタグの内容をGPTに読ませ、タグをキーワードにした文章を生成してもらう方法で絵本を作成します。
+- アルバム機能  
+- 写真アップロード  
+- タグ付け  
+- 説明入力  
+- 画像のAPIを使用し分類
+  - ChatGPTAPIで画像を読み込ませて文章を生成することは現段階ではできない？という記事を見つけたので、もしできない場合は自分で写真に関連タグを付けます。そのタグの内容をGPTに読ませ、タグをキーワードにした文章を生成してもらう方法で絵本を作成します。
 但し、画像URLをマークダウンにして読み込ませることができるらしいので、そちらの方法も検討しています。
     -  [画像をChatGPTに読み込ませる](https://www.zero-pri.com/entry/chatgpt-gazouninsyou)
 
