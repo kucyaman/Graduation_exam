@@ -1,6 +1,5 @@
 # 使用したいRubyのimageを指定
 FROM ruby:3.2.2
-ARG RUBYGEMS_VERSION=3.3.20
 
 # PostgreSQLクライアントをインストール
 RUN apt-get update -qq && apt-get install -y postgresql-client
