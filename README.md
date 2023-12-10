@@ -2,7 +2,8 @@
 
 ### [画面遷移図](https://www.figma.com/file/IgI2EjvjNRYXwpOJOAJGgF/%E7%84%A1%E9%A1%8C?type=design&node-id=0%3A1&mode=design&t=im7ENdSZSrVH0Zh8-1)
 ### ER図
-[![Image from Gyazo](https://i.gyazo.com/e5b0440f7d37b6e401c0312919e3b7c4.png)](https://gyazo.com/e5b0440f7d37b6e401c0312919e3b7c4)
+[![Image from Gyazo](https://i.gyazo.com/7de8a1ed241927be2df80662cfc338c3.png)](https://gyazo.com/7de8a1ed241927be2df80662cfc338c3)  
+  
 
 **■ サービス概要**  
 大切な思い出の写真を物語に変換します。  
@@ -58,26 +59,26 @@ https://demand-services.microad.jp/blog/104-housewives-ads
 - 説明入力  
 - 画像のAPIを使用し分類
   - ChatGPTAPIで画像を読み込ませて文章を生成することは現段階ではできない？という記事を見つけたので、もしできない場合は自分で写真に関連タグを付けます。そのタグの内容をGPTに読ませ、タグをキーワードにした文章を生成してもらう方法で絵本を作成します。
-但し、画像URLをマークダウンにして読み込ませることができるらしいので、そちらの方法も検討しています。
-    -  [画像をChatGPTに読み込ませる](https://www.zero-pri.com/entry/chatgpt-gazouninsyou)
+但し、画像URLをマークダウンにして読み込ませることができるらしいので、そちらの方法も検討しています。  
+    -  [画像をChatGPTに読み込ませる](https://www.zero-pri.com/entry/chatgpt-gazouninsyou)  
 
 - 絵本生成  
-  - 写真選択 (あまり情報が多くなるとトークンがすごそうなので起承転結の４枚、もしくは３枚程度を考えています。他にも制限をかけるかも)
+  - 写真選択 (あまり情報が多くなるとトークンがすごそうなので起承転結の４枚、もしくは３枚程度を考えています。他にも制限をかけるかも)  
   - 表紙イメージの選択 （イメージは３パターンくらい作成しようと考えています。りーどみーが可愛かったので入力の感じとかを参考にしたいです。素材はフリー素材を使って自作する予定です。）
     - [イメージ例](https://www.canva.com/design/DAF1JWlNpUs/msA505uRNzZ162mVcplRmQ/edit?utm_content=DAF1JWlNpUs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
   
 **■ 本リリース**  
 - フレンド機能  
-  -フレンドにだけ公開できるようにするため
--Like
--コメント
--その他外部ログイン　
--家族へのシェア（みてねの機能参考）
-  -家族の招待機能
--不適切な画像のバリデーション[Google Cloud Vision API](https://qiita.com/kumaryoya/items/7d2ee56a10172b7f0b29)
+  -フレンドにだけ公開できるようにするため  
+-Like  
+-コメント  
+-その他外部ログイン  
+-家族へのシェア（みてねの機能参考）  
+  -家族の招待機能  
+-不適切な画像のバリデーション[Google Cloud Vision API](https://qiita.com/kumaryoya/items/7d2ee56a10172b7f0b29)  
   
 **■ 機能の実装方針予定**  
-- MiniMagick
+- MiniMagick  
 - AWS S3  
 - renderでのデプロイ  
 - ログイン機能（Google,X,Instagram）  
