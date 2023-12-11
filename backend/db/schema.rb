@@ -26,8 +26,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_10_024836) do
 
   create_table "pages", force: :cascade do |t|
     t.integer "page_number", null: false
-    t.integer "content_type"
-    t.integer "content"
+    t.string "content_type"
+    t.string "content"
     t.bigint "photo_id", null: false
     t.bigint "book_id", null: false
     t.datetime "created_at", null: false
@@ -54,7 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_10_024836) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.integer "name", null: false
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
