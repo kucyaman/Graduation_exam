@@ -1,5 +1,12 @@
-## Graduation_exam  
-
+## Welcome to my app Bookiss
+  
+### Build the app
+```
+docker compose build
+docker-compose run web rails db:create
+docker-compose up --build -d
+```
+  
 ### [画面遷移図](https://www.figma.com/file/IgI2EjvjNRYXwpOJOAJGgF/%E7%84%A1%E9%A1%8C?type=design&node-id=0%3A1&mode=design&t=im7ENdSZSrVH0Zh8-1)
 ### ER図
 [![Image from Gyazo](https://i.gyazo.com/7de8a1ed241927be2df80662cfc338c3.png)](https://gyazo.com/7de8a1ed241927be2df80662cfc338c3)  
