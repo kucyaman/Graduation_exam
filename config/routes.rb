@@ -5,5 +5,4 @@ Rails.application.routes.draw do
 
   post '/user_sessions/callback', to: 'user_sessions#callback'
   delete 'logout', to: 'user_sessions#destroy', as: :logout
-
 end
