@@ -48,6 +48,13 @@ gem "sassc-rails"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# Bootstrap5
+gem "bootstrap", "~> 5.2.0"
+# please switch to Node.js (V8) or mini_racer (V8)が出た場合
+gem "mini_racer", "~> 0.6.2"
+
+gem 'googleauth'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -70,8 +77,3 @@ group :development do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
 end
-
-# Bootstrap5
-gem "bootstrap", "~> 5.2.0"
-# please switch to Node.js (V8) or mini_racer (V8)が出た場合
-gem "mini_racer", "~> 0.6.2"
