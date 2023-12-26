@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      book: 本
+    attributes:
+      user:
+        email: メールアドレス
+      book:
+        title: タイトル
+        design_type: デザイン
