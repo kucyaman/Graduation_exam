@@ -55,6 +55,9 @@ gem "mini_racer", "~> 0.6.2"
 
 gem 'googleauth'
 
+# Use rails-i18n Rails Locale Data Repository [https://github.com/svenfuchs/rails-i18n]
+gem 'rails-i18n', '~> 7.0.8'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
