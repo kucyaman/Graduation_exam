@@ -1,0 +1,11 @@
+  <%= form_with model: book, url: book_pages_path(@book), local: true, method: :post do |f| %>
+    <%= f.fields_for :pages do |pf| %>
+      <div class="mb-3">
+        <%= pf.label :content, "Content for page #{pf.index + 1}" %>
+        <%= pf.text_area :content %>
+        <%= pf.label :photo, "Photo for page #{pf.index + 1}" %>
+        <%= pf.file_field :photo %>
+      </div>
+    <% end %>
+    <%= f.submit "Create" %>
+  <% end %>
