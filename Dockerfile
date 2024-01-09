@@ -2,7 +2,7 @@
 FROM ruby:3.2.2
 
 # PostgreSQLクライアントをインストール
-RUN apt-get update -qq && apt-get install -y postgresql-client
+RUN apt-get update -qq && apt-get install -y postgresql-client vim
 RUN mkdir /app
 WORKDIR /app
 
