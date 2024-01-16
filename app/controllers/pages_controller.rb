@@ -9,16 +9,22 @@ class PagesController < ApplicationController
   def create
     ActiveRecord::Base.transaction do
       @book.assign_attributes(book_params)
-
       @book.pages.each_with_index do |page, index|
         page.page_number = index + 1
       end
 
+      # ここでBookと関連するPagesを保存
       if @book.save
-        redirect_to books_path, success: "Pageの作成に成功しました"
-      else
-        flash.now[:danger] = @book.errors.full_messages.to_sentence
-        render :new, status: :unprocessable_entity
+        image_urls = []
+
+        # 保存後、各ページの画像URLを取得
+        @book.pages.each do |page|
+          if page.photo.file.present?
+            image_url = page.photo.url
+            image_urls << image_url
+            Rails.logger.debug("#{image_url} urlを確認")  
+          end
+        end
       end
     end
   rescue ActiveRecord::RecordInvalid => e
