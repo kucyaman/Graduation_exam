@@ -23,9 +23,7 @@ class PagesController < ApplicationController
         end
         open_ai_api = OpenAiApi.new
         descriptions = open_ai_api.fetch_image_description(image_urls)
-        puts "Image Descriptions: #{descriptions}"
         story_parts = open_ai_api.create_story(descriptions)
-        puts "Generated Story: #{story_parts}"
 
         split_parts = split_story_into_parts(story_parts)
         @book.pages.each_with_index do |page, index|

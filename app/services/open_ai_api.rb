@@ -20,7 +20,6 @@ class OpenAiApi
           messages: [{ role: "user", content: messages }]
         }
       )
-      puts "Response for URL #{image_url}: #{response.inspect}"
 
       description = response.dig("choices", 0, "message", "content")
       image_descriptions << description if description
