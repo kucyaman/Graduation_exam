@@ -33,10 +33,10 @@ class PagesController < ApplicationController
         @book.save
         redirect_to books_path
       end
+    rescue ActiveRecord::RecordInvalid => e
+      flash.now[:danger] = e.message
+      render :new, status: :unprocessable_entity
     end
-  rescue ActiveRecord::RecordInvalid => e
-    flash.now[:danger] = e.message
-    render :new, status: :unprocessable_entity
   end
 
   private
