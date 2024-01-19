@@ -11,7 +11,7 @@ class BooksController < ApplicationController
     @book = current_user.books.build(book_params)
 
     if @book.save
-      redirect_to new_book_page_path(book_id: @book.id), success: "Bookの作成に成功しました"
+      redirect_to new_book_page_path(book_id: @book.id)
     else
       flash.now[:danger] = "Bookの作成に失敗しました"
       render :new, status: :unprocessable_entity
