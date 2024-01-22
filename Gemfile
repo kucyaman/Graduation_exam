@@ -62,6 +62,8 @@ gem 'carrierwave'
 
 gem "aws-sdk-s3", require: false
 gem 'fog-aws'
+gem "mini_magick"
+
 
 gem 'ruby-openai'
 

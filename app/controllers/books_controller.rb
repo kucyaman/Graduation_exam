@@ -18,6 +18,10 @@ class BooksController < ApplicationController
     end
   end
 
+  def show
+    @book = book
+  end
+
   private
 
   def book_params
