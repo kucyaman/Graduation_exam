@@ -14,7 +14,7 @@ module ApplicationHelper
     when "fairy_tale"
       "Fairy.png"
     else
-      "react.gif"
+      "Car.png"
     end
   end
 end
