@@ -7,7 +7,7 @@
       <ul class="navbar-nav ms-auto" style="display: flex; flex-direction: row;">
         <div id="g_id_onload"
           data-client_id="<%= Rails.application.credentials.dig(:google, :google_client_id) %>"
-          data-login_uri=<%= Rails.application.credentials.dig(:google, :google_callback) %>
+          data-login_uri="<%= environment_specific_url %>"
           data-auto_prompt="false">
         </div>
         <div class="g_id_signin"
