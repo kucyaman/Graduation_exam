@@ -6,4 +6,15 @@ module ApplicationHelper
       "http://localhost:8000/user_sessions/callback"
     end
   end
+
+  def image_for_design_type(book)
+    case book.design_type
+    when "circus"
+      "Circus.png"
+    when "fairy_tale"
+      "Fairy.png"
+    else
+      "react.gif"
+    end
+  end
 end
