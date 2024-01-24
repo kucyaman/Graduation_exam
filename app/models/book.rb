@@ -4,6 +4,6 @@ class Book < ApplicationRecord
 
   accepts_nested_attributes_for :pages
 
-  validates :title, presence: true
+  validates :title, presence: true, length: { maximum: 10 }
   validates :design_type, presence: true
 end
