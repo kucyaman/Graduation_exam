@@ -1,6 +1,9 @@
 <div class="col-md-3 mb-3">
   <div class="position-relative mr-1">
-    <%= image_tag image_for_design_type(book), width: "300", height: "300" %>
-    <p class="title"><%= book.title %></p>
+    <%= link_to book_path(book), class: 'image-link' do %>
+      <%= image_tag image_for_design_type(book), width: "300", height: "300" %>
+    <% end %>
+    <p class="book-title"><%= book.title %></p>
   </div>
+  <%= button_to '削除', book_path(book), method: :delete, data: { turbo_confirm: "削除してもよろしいですか？" }, class: 'btn btn-link' %>
 </div>

@@ -17,4 +17,15 @@ module ApplicationHelper
       "Car.png"
     end
   end
+
+  def image_for_page(book)
+    case book.design_type
+    when "circus"
+      "CircusPage.png"
+    when "fairy_tale"
+      "FairyPage.png"
+    else
+      "CarPage.png"
+    end
+  end
 end
