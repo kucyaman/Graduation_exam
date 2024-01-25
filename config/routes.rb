@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "home#top"
 
-  resources :books, only: %i[index new create] do
+  resources :books do
     resources :pages, only: %i[new create]
   end
 

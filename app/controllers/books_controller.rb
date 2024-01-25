@@ -1,8 +1,17 @@
 class BooksController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
+  before_action :find_book, only: [:show, :destroy]
 
   def index
     @book = current_user.books.order(created_at: :desc)
+  end
+
+  def show
+    @page = if params[:page_number].present?
+              @book.pages.find_by(page_number: params[:page_number])
+            else
+              nil
+            end
   end
 
   def new
@@ -20,9 +29,19 @@ class BooksController < ApplicationController
     end
   end
 
+  def destroy
+    @book.destroy!
+    redirect_to books_path, status: :see_other
+    flash[:success] = '削除が完了しました。'
+  end
+
   private
 
   def book_params
     params.require(:book).permit(:title, :design_type)
   end
+end
+
+def find_book
+  @book = current_user.books.find(params[:id])
 end

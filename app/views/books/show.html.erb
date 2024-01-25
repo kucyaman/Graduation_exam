@@ -1,0 +1,24 @@
+<div class="container mt-3">
+  <% if @page.nil? %>
+      <div class="position-relative">
+        <%= image_tag image_for_design_type(@book), width: "550", height: "550" %>
+        <p class="show-title"><%= @book.title %></p>
+      </div>  
+    <%= link_to '進む', book_path(@book, page_number: 1), class: 'button' %>
+  <% else %>
+    <div class="position-relative">
+      <%= image_tag @page.photo.url, class: "show-photo", width: "320", height: "420" if @page.photo.present? %>
+      <%= image_tag image_for_page(@book), width: "1100", height: "550" %>
+      <p class="show-content"><%= @page.content %></p>
+    </div>
+    <% if @page.page_number > 1 %>
+      <%= link_to '戻る', book_path(@book, page_number: @page.page_number - 1), class: 'btn btn-primary' %>
+    <% else %>
+      <%= link_to '戻る', book_path(@book), class: 'btn btn-primary' %>
+    <% end %>
+
+    <% if @page.page_number < 3 %>
+      <%= link_to '進む', book_path(@book, page_number: @page.page_number + 1), class: 'btn btn-primary float-right' %>
+    <% end %>
+  <% end %>
+</div>
