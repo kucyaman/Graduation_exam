@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
-  before_action :find_book, only: [:show, :destroy]
+  before_action :find_book, only: [:show, :edit, :update, :destroy]
 
   def index
     @book = current_user.books.order(created_at: :desc)
@@ -29,6 +29,19 @@ class BooksController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
+  def update
+    if @book.update(book_params)
+      redirect_to @book, notice: '絵本が更新されました。'
+    else
+      flash.now[:danger] = '更新に失敗しました。'
+      render :edit
+    end
+  end
+
   def destroy
     @book.destroy!
     redirect_to books_path, status: :see_other
@@ -38,7 +51,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :design_type)
+    params.require(:book).permit(:title, :design_type, pages_attributes: [:id, :page_number, :photo, :content])
   end
 end
 
