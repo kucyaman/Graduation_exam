@@ -30,7 +30,7 @@ class OpenAiApi
 
   def create_story(descriptions)
     messages = [
-      { type: :text, text: "以下の説明を使って子供向けの物語を作成してください。50文字以内で作成してください。japan only: #{descriptions}\n\n1:\n2:\n3:\n" }
+      { type: :text, text: "以下の説明を使って子供向けの物語を作成してください。物語はつながるように作成してください。50文字以内で作成してください。japan only: #{descriptions}\n\n1:\n2:\n3:\n" }
     ]
 
     response = @client.chat(
