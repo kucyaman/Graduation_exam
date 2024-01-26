@@ -1,0 +1,19 @@
+<%= form_with(model: @book, local: true) do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <% @book.pages.order(:page_number).each do |page| %>
+    <div>
+      <%= form.fields_for :pages, page do |pf| %>
+        <div>
+          <%= pf.label :content %>
+          <%= pf.text_area :content %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= form.submit '更新' %>
+<% end %>
