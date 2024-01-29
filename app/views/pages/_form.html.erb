@@ -1,9 +1,20 @@
-  <%= form_with model: book, url: book_pages_path(@book), local: true, method: :post do |f| %>
+<%= form_with model: book, url: book_pages_path(@book), local: true, method: :post do |f| %>
+  <div class="row mb-5">
     <%= f.fields_for :pages do |pf| %>
-      <div class="mb-3">
-        <%= pf.label :photo, "Photo for page #{pf.index + 1}" %>
-        <%= pf.file_field :photo %>
+      <div class="col mb-3">
+        <div>
+          <%= image_tag 'Bookiss.jpg', id: "preview_#{pf.index}", style: 'max-width: 300px; max-height: 300px;' %>
+        </div>
+        <div>
+          <%= pf.label :photo, "Photo for page #{pf.index + 1}" %>
+        </div>
+        <div>
+          <%= pf.file_field :photo, id: "photo_#{pf.index}", class: 'photo-input' %>
+        </div>
       </div>
     <% end %>
-    <%= f.submit "Create" %>
-  <% end %>
+  </div>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "Create", class: "btn btn-primary m-4 " %>
+    </div>
+<% end %>
