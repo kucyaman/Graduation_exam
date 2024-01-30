@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
     payload = Google::Auth::IDTokens.verify_oidc(params[:credential], aud: client_id)
     user = User.find_or_create_by(email: payload['email'])
     session[:user_id] = user.id
-    redirect_to books_path
+    redirect_to books_path, status: :unprocessable_entity
     flash[:success] = "ログインしました"
   end
 
@@ -27,6 +27,14 @@ class UserSessionsController < ApplicationController
     if cookies["g_csrf_token"].blank? || params[:g_csrf_token].blank? || cookies["g_csrf_token"] != params[:g_csrf_token]
       redirect_to root_path
       flash[:danger] = "不正なアクセスです"
+    end
+  end
+
+  def environment_specific_url
+    if Rails.env.production?
+      "https://bookiss.onrender.com/user_sessions/callback"
+    else
+      "http://localhost:8000/user_sessions/callback"
     end
   end
 end
