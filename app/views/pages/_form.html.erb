@@ -2,10 +2,10 @@
   <div class="row mb-5">
     <%= f.fields_for :pages do |pf| %>
       <div class="col mb-3">
-        <div>
+        <div class="mb-3">
           <%= image_tag 'Bookiss.jpg', id: "preview_#{pf.index}", style: 'max-width: 300px; max-height: 300px;' %>
         </div>
-        <div>
+        <div class="mb-3">
           <%= pf.label :photo, "Photo for page #{pf.index + 1}" %>
         </div>
         <div>

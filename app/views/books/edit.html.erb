@@ -1,19 +1,36 @@
-<%= form_with(model: @book, local: true) do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+<div class="container">
+
+  <div class="text-center">
+    <h3 class="mt-5 mb-3">絵本の中身を編集しよう</h3>
+    <p>Please edit your favorite story.</p>
   </div>
 
-  <% @book.pages.order(:page_number).each do |page| %>
-    <div>
-      <%= form.fields_for :pages, page do |pf| %>
-        <div>
-          <%= pf.label :content %>
-          <%= pf.text_area :content %>
-        </div>
+  <%= form_with(model: @book, local: true) do |f| %>
+    <div class="col-4 mb-5">
+      <%= f.label :title, class: "form-label" %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="row mb-5">
+      <% @book.pages.order(:page_number).each do |page| %>
+        
+          <%= f.fields_for :pages, page do |pf| %>
+            <div class="col mb-3">
+              <div class="mb-3">
+                <% if page.photo.present? %>
+                  <%= image_tag page.photo.url, class: "img-fluid" %>
+                <% else %>
+                  <p>No photo available for this page.</p>
+                <% end %>
+              </div>
+
+              <%= pf.label :content,"Content for page #{pf.index + 1}", class: "form-label" %>
+              <%= pf.text_area :content, class: "form-control", style: "height: 200px;" %>
+            </div>
+          <% end %>
       <% end %>
     </div>
+    <div class="d-flex justify-content-center">
+    <%= f.submit '変更', class:'btn btn-primary m-4'  %>
+  </div> 
   <% end %>
-
-  <%= form.submit '更新' %>
-<% end %>
+</div>
