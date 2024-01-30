@@ -1,9 +1,8 @@
 <header>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d9d9d9;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #8EC1C4;">
     <div class="container">
-      <%= link_to 'Bookiss',root_path, class: "navbar-brand font-large cantata" %>
       <ul class="navbar-nav ms-auto" style="display: flex; flex-direction: row;">
         <div id="g_id_onload"
           data-client_id="<%= Rails.application.credentials.dig(:google, :google_client_id) %>"
