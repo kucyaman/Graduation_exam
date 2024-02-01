@@ -373,6 +373,7 @@ DEPENDENCIES
   googleauth
   importmap-rails
   jbuilder
+  mini_magick
   mini_racer (~> 0.6.2)
   pg (~> 1.1)
   puma (~> 5.0)

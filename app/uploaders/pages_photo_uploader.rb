@@ -1,4 +1,6 @@
 class PagesPhotoUploader < CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
+  process resize_to_fill: [500, 600]
   # storage :file
   storage :fog
 
