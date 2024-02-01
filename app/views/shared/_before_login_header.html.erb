@@ -4,6 +4,7 @@
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #8EC1C4;">
     <div class="container">
       <ul class="navbar-nav ms-auto" style="display: flex; flex-direction: row;">
+        <li class="me-2">
         <div id="g_id_onload"
           data-client_id="<%= Rails.application.credentials.dig(:google, :google_client_id) %>"
           data-login_uri="<%= ENV['CALLBACK_URL'] %>"
@@ -17,6 +18,12 @@
           data-shape="pill"
           data-logo_alignment="left">
         </div>
+        </li>
+        <li>
+        <%= link_to books_path, class: "navbar-brand font-large cantata" do %>
+            <%= image_tag "Bookiss.png", width: "40", height: "40" %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </nav>
