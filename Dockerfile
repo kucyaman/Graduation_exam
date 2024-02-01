@@ -6,6 +6,9 @@ RUN apt-get update -qq && apt-get install -y postgresql-client vim
 RUN mkdir /app
 WORKDIR /app
 
+# imagemagickをインストール
+RUN apt-get update && apt-get install -y imagemagick libmagickwand-dev
+
 # Gemをインストール
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
