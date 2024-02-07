@@ -1,14 +1,14 @@
-<div class="container mt-3">
+<div class="container raw">
   <% if @page.nil? %>
       <div class="position-relative">
-        <%= image_tag image_for_design_type(@book), width: "550", height: "550" %>
+        <%= image_tag image_for_design_type(@book), width: "500" %>
         <p class="show-title"><%= @book.title %></p>
       </div>  
-    <%= link_to '進む', book_path(@book, page_number: 1), class: 'button' %>
+    <%= link_to '進む', book_path(@book, page_number: 1), class: 'btn btn-primary' %>
   <% else %>
     <div class="position-relative">
       <%= image_tag @page.photo.url, class: "show-photo", width: "320", height: "420" if @page.photo.present? %>
-      <%= image_tag image_for_page(@book), width: "1100", height: "550" %>
+      <%= image_tag image_for_page(@book), width: "1100" %>
       <p class="show-content"><%= @page.content %></p>
     </div>
     <% if @page.page_number > 1 %>
