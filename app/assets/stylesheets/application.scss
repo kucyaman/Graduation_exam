@@ -1,31 +1,32 @@
 @import "bootstrap";
+@import "loader";
 
 .book-title {
   position: absolute;
-  top: 60px;
-  left: 35px;
+  top: 85px;
+  left: 32px;
   width: 180px;
   text-align: center;
 }
 
 .show-title {
   position: absolute;
-  top: 135px;
-  left: 120px;
-  width: 300px;
+  top: 180px;
+  left: 100px;
+  width: 280px;
   text-align: center;
   font-weight: bold;
 }
 
 .show-photo {
   position: absolute;
-  top: 85px;
-  left: 90px;
+  top: 130px;
+  left: 120px;
 }
 
 .show-content {
   position: absolute;
-  top: 210px;
+  top: 280px;
   left: 650px;
   width: 320px;
   height: 70px;
